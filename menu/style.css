@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  height: 300vh;
+}
+
+.nav-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: rgb(31, 31, 31);
+  margin: 8px;
+  cursor: pointer;
+}
+
+/* .nav-button{
+    display: flex;
+    justify-content: flex-end;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: rgb(1, 52, 52);
+    margin: 8px;
+    cursor: pointer;
+} botão na esquerda*/
+
+.nav-button i {
+  color: #fff;
+}
+
+.overlay {
+  width: 0;
+  height: 100%;
+  background-color: rgb(31, 31, 31, 1);
+  z-index: 9;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in;
+}
+
+/*abre o menu da direita para a esquerda*/
+
+/* .overlay{
+    width: 0;
+    height: 100%;
+    background-color: rgba(16, 109, 106, 0.9);
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+} abre o menu da direita para a esquerda */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  top: 12%;
+  width: 100%;
+  right: -20%;
+  /* text-align: center; */
+  margin-top: 30px;
+}
+
+.type-h2 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 75px;
+  letter-spacing: -.04em;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.type-h2 {
+  font-size: 59px;
+  line-height: 79px;
+}
+
+.overlay-content .menu-item {
+  transition: color .45s var(--primary-ease);
+  position: relative;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.overlay-content .menu-item .palavraPrincipal {
+  display: block;
+  position: relative;
+  z-index: 3;
+  transition: all .75s var(--custom-ease-4);
+  clip-path: inset(0 0 0 0);
+}
+
+.overlay-content .menu-item.focused.focused-out .palavraPrincipal {
+  clip-path: inset(0 0 0 0);
+  transform: translate3d(35px, 0, 0);
+}
+
+.overlay-content .menu-item.focused-out .palavraPrincipal {
+  clip-path: inset(0 100% 0 0);
+}
+
+.overlay-content .menu-item .numero {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition: all .85s var(--custom-ease-4);
+}
+.overlay-content .menu-item.focused .numero{
+  transform: translateZ(0) ;
+  opacity: 1;
+}
+.type-num{
+  font-family: Neue Plak W01 Bold,sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: .25em;
+}
+.overlay-content .palavraEmBaixo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #2b2a2c;
+  z-index: 1;
+  transition: transform .75s;
+}
+
+.overlay-content .menu-item.focused .palavraEmBaixo {
+  transform: translate3d(35px, 0, 0);
+}
+
+.overlay-content {
+  padding: 8px;
+  font-size: 60px;
+}
+
+.overlay a {
+
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media sceen and(max-height:450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay,
+  .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+:root {
+  --custom-ease-4: cubic-bezier(0.25, 0.1, 0.25, 1); /* Exemplo de função personalizada */
+}
+.mobile-menu {
+  /* display: none; */
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+
+  .nav-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: rgb(1, 52, 52);
+    margin: 8px;
+    cursor: pointer;
+  }
+  
+  .nav-button i {
+    color: #fff;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 109, 106, 0.9);
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: all 0.5s;
+  }
+  
+  .overlay-content {
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    font-size: 34px;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+  
+    .overlay,
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+   */

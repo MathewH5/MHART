@@ -1,0 +1,237 @@
+.box {
+    width: 400px;
+    height: 400px;
+    border: 5px solid black;
+    margin: 20px auto;
+}
+
+.item1,
+.item2 {
+    width: 150px;
+    height: 150px;
+}
+
+.item1 {
+    background-color: aqua;
+}
+
+.item2 {
+    background-color: red;
+}
+
+.img img,
+.img2 img,
+.img3 img {
+    width: 400px;
+    height: 400px;
+
+}
+
+.foto {
+    width: 800px;
+    height: 400px;
+    border: 5px solid black;
+    margin: 50px;
+}
+
+.img2 {
+    position: relative;
+    left: 30px;
+}
+
+.foto2 {
+    width: 1200px;
+    height: 400px;
+
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.img3 {
+    position: relative;
+    left: 50%;
+    z-index: 1;
+}
+
+.foto3 {
+    position: absolute;
+    bottom: 5px;
+    left: 600px;
+    width: 300px;
+    height: 800px;
+    border: 5px solid black;
+    margin: 50px;
+    z-index: 2;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.para {
+
+    transition:  3s;
+
+}
+
+.para.show {
+
+    animation: fadeInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: .5s;
+    /* don't forget to set a duration! */
+}
+
+.produto {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.produto.show {
+    opacity: 1;
+}
+
+.produto1 {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.produto1.show {
+    opacity: 1;
+    animation: fadeInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+}
+
+.produto2 {
+    opacity: 70%;
+    transition: 3s;
+}
+
+.produto2.show {
+    opacity: 1;
+    animation: btn-animation 1s ease-out;
+}
+
+@keyframes btn-animation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    110% {
+        transform: translateY(0px);
+    }
+}
+.animated-button {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .button-text-wrapper {
+    position: relative;
+    display: inline-block;
+    transform-origin: right center;
+    transition: transform 0.3s;
+  }
+  
+  .animated-button:hover .button-text-wrapper {
+    transform: translateX(120%);
+  }
+  
+  .animated-button::before {
+    content: "hdf";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6600;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 1;
+  }
+  
+  
+  .animated-button:hover::before {
+    transform: translateX(0%);
+  }
+  
+  .dual-call-button {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .call-text {
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .dual-call-button:hover .call-text:first-child {
+    transform: translateY(-100%);
+  }
+  
+  .dual-call-button:hover .call-text:last-child {
+    transform: translateY(100%);
+  }
+  
+
+  .dual-call-button2 {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .call-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .call-text-top {
+    z-index: 2;
+  }
+  
+  .dual-call-button2:hover .call-text-top {
+    transform: translateY(-100%);
+  }
+  
+  .dual-call-button2:hover .call-text-bottom {
+    transform: translateY(0%);
+  }
+  

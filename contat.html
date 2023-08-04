@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <link rel="stylesheet" href="css/contat.css">
+  <link rel="shortcut icon" href="img/logo teste site.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>MHA Formulario</title>
+</head>
+
+<body>
+  
+  <header id="header">
+    <nav>
+      <a class="logo" href="#">Michel Art</a>
+      <ul class="nav-list" id="lista1">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+      </ul>
+      <ul class="nav-list" id="lista2">
+        <li><a  class="contat" href="">CONTAT</a></li>
+        <li><a href="">ABOUT</a></li>
+      </ul>
+
+    </nav>
+  </header>
+<section class="rTotal">
+
+  <div class="container">
+    <div class="text">
+      <h1>OUR CONTAT</h1>
+        <p>Estamos aqui, para tirar todas as suas duvidas e quem sabe Realizamos seu sonho. Criando o projeto exatamente do jeito que você pensa. Podemos nos comunicar mais para compriender um pouco mais sobre seus projeito.  </p>
+        
+    </div>
+    <div class="containerFoto">
+      <div class="respi">
+        <img class="imgPrincipal" src="img/resepição maior2.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  
+  <div class="box">
+    <form action="">
+      <fieldset>
+        <legend><strong>Fórmulário de cilentes</strong></legend>
+        <br>
+        <div class="inputBox">
+          <input type="text" name="nome" id="nome" class="inputUser" required>
+          <label for="nome"  class="labelInput">Nome</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <input type="text" name="sobrenome" id="sobrenome" class="inputUser" required>
+          <label for="sobrenome" class="labelInput">Sobrenome</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <input type="email" name="email" id="email" class="inputUser" required>
+          <label for="email" class="labelInput">E-mail</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+          <label for="telefone" class="labelInput">Telefone</label>
+        </div>
+        <br><br>
+        <div class="inputBox">
+            <textarea id="bio" name="bio" rows="6" cols="60" class="inputUser"></textarea>
+            <label for="bio" class="labelInputDescrição">Tell us about your project (Scope, timeline, budget, etc.) </label>
+        </div>
+        <br><br>
+        <input type="submit" name="submit" id="submit">
+      </fieldset>
+    </form>
+  </div>
+
+</section>
+  
+  <script src="java/contat.js"></script>
+</body>
+</html>
