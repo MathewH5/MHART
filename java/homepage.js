@@ -1,18 +1,44 @@
+// document.addEventListener('DOMContentLoaded', function() {
+//     const r4 = document.querySelector('.r4');
+//     const titulo =document.querySelector('.titulo');
+//     const discricao =document.querySelector('.discricao');
+//     const boxgesso =document.querySelector('.boxgesso');
+//     const ServiçosOferecidos =document.querySelector('.ServiçosOferecidos');
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add('show');
+//         } else {
+//           entry.target.classList.remove('show');
+//         }
+//       });
+//     });
+//     observer.observe(r4);
+//     observer.observe(titulo);
+//     observer.observe(discricao);
+//     observer.observe(boxgesso);
+//     observer.observe(ServiçosOferecidos);
+//   });
 document.addEventListener('DOMContentLoaded', function() {
-    const r4 = document.querySelector('.r4');
-    const titulo =document.querySelector('.titulo');
-    const observer = new IntersectionObserver((entries) => {
+  const r4 = document.querySelector('.r4');
+  const titulo = document.querySelector('.titulo');
+  const discricao = document.querySelector('.discricao');
+  const boxgesso = document.querySelector('.boxgesso');
+  const ServiçosOferecidos = document.querySelector('.ServiçosOferecidos');
+  const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
+          if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+          }
       });
-    });
-    observer.observe(r4);
-    observer.observe(titulo);
   });
+
+  observer.observe(r4);
+  observer.observe(titulo);
+  observer.observe(discricao);
+  observer.observe(boxgesso);
+  observer.observe(ServiçosOferecidos);
+});
 //o de baixo é para rolagem
   window.addEventListener("scroll", function(){
     let header = document.querySelector('#scrol')
