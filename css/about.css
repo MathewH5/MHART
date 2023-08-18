@@ -76,6 +76,17 @@ nav {
     color: rgb(181, 152, 90);
 
 }
+
+#header>nav li .about::after {
+    content: " ";
+    height: 2px;
+    position: absolute;
+    background-color:  rgb(181, 152, 90);
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
 #header > nav li a:hover{
     color: rgb(181, 152, 90);
     width: 100%;
@@ -128,4 +139,28 @@ a {
         background: rgb(22, 14, 14);
         overflow: hidden;
         filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, .6));
+}
+.footer{
+    position: relative;
+        width: 100%;
+        min-height: 100vh;
+        height: 70vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* rgb(14, 9, 9) */
+        background: rgb(244, 209, 150);
+        overflow: hidden;
+        filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, .6));
+}
+.dividirfooter{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: stretch;
+
+}
+.imgdourada{
+    opacity: 70%;
+    
 }

@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const titulo = document.querySelector('.titulo');
   const discricao = document.querySelector('.discricao');
   const boxgesso = document.querySelector('.boxgesso');
-  const ServiçosOferecidos = document.querySelector('.ServiçosOferecidos');
   const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -38,7 +37,39 @@ document.addEventListener('DOMContentLoaded', function() {
   observer.observe(discricao);
   observer.observe(boxgesso);
   observer.observe(ServiçosOferecidos);
+
 });
+document.addEventListener('DOMContentLoaded', function() {
+
+  const animateup = document.querySelector('.animate-up');
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+          }
+      });
+  });
+
+
+  observer.observe(animateup);
+});
+
+// window.addEventListener("scroll", function() {
+//   var scrollTop = window.scrollY;
+//   var zoomContainer = document.querySelector(".zoom-container");
+
+
+//   var zoomFactor = 0.001;
+
+//   var zoomAmount = 1 - (scrollTop * zoomFactor);
+//   zoomContainer.style.transform = `perspective(1200px) translateX(0px) translateY(0px) scale(${zoomAmount}) rotate(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)`;
+// });
+
+
+
+
+
+
 //o de baixo é para rolagem
   window.addEventListener("scroll", function(){
     let header = document.querySelector('#scrol')

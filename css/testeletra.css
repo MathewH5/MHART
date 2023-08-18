@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.work-item {
+    padding: 40px;
+}
+.animate-up {
+    overflow: hidden;
+    position: relative;
+}
+.animate-up span {
+
+    /* opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.8s ease, transform 0.8s ease; */
+    animation-timing-function: cubic-bezier(.52, .01, .16, 1);
+    animation-name: revelar;
+    animation-duration: 1550ms;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+    margin: 0;
+}
+.animate-up span {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+    display: block;
+}
+/* .animate-up.active {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.animate-text p {
+    margin: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slide-up 0.5s forwards;
+
+}
+
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-text p:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.animate-text p:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes revelar {
+
+    0% {
+        transform: translate3d(0, 125%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0%, 0);
+        opacity: 1;
+    }
+}
+
+.anim-delay-8 {
+    transition-delay: 810ms;
+}
+
+.anim-wrapper {
+    overflow: hidden;
+    position: relative;
+}
