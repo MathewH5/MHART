@@ -1,10 +1,10 @@
-body{
+body {
     margin: 0;
     padding: 0;
 
 }
 
-.verMais {
+/* .verMais {
 
     position: absolute;
     top: 50%;
@@ -15,45 +15,49 @@ body{
     font-size: 36px;
     color: rgb(167, 163, 143);
     letter-spacing: 5px;
-    /* border: 4px solid #262626; */
+    border: 4px solid #262626;
     padding: 10px 20px;
-    
+
     box-sizing: border-box;
     overflow: hidden;
-    
+
 }
-.verMais:before{
+
+.verMais:before {
     content: attr(data-title);
     position: absolute;
     top: 100%;
     left: 0;
     background-color: rgb(167, 163, 143);
-    color:rgb(241, 238, 233);
+    color: rgb(241, 238, 233);
     padding: 10px 20px;
     box-sizing: border-box;
     transition: .3s;
 
 }
-.verMais:after{
-    
+
+.verMais:after {
+
     content: attr(data-title);
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgb(135, 117, 23);
-    color:rgb(101, 67, 7);
+    color: rgb(101, 67, 7);
     padding: 10px 20px;
     box-sizing: border-box;
     transition: .3s;
-    
+
 }
-.verMais:hover:before{
+
+.verMais:hover:before {
     top: 0;
-    
+
 }
-.verMais:hover:after{
+
+.verMais:hover:after {
     top: -100%;
-    
+
 }
 
 @keyframes slide-up {
@@ -62,11 +66,64 @@ body{
         transform: translateY(0);
     }
 }
+
 .animate-text p:nth-child(1) {
     animation-delay: 0.5s;
 }
 
 .animate-text p:nth-child(2) {
     animation-delay: 1s;
+} */
+
+a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border: 2px solid #262626;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #262626;
+    overflow: hidden;
 }
 
+a span {
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+a span:nth-child(odd):before {
+    content: attr(data-text);
+    position: absolute;
+    transform: translateY(100%);
+}
+
+a span:nth-child(odd) {
+    transform: translateY(-100%);
+}
+
+a:hover span:nth-child(odd) {
+    transform: translateY(0);
+}
+
+a span:nth-child(even):before {
+    content: attr(data-text);
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+a span:nth-child(even) {
+    transform: translateY(100%);
+}
+
+a:hover span:nth-child(even) {
+    transform: translateY(0);
+}

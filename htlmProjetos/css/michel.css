@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.conainer {
+    position: relative;
+    margin-top: 3%;
+
+}
+
+.control {
+    list-style: none;
+}
+
+.control li {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control li:hover {
+    background: #000;
+}
+
+.control li#next {
+    right: 20px;
+}
+
+.control li#voltar {
+    left: 20px;
+}
+
+.tns-nav {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.tns-nav button {
+    height: 13px;
+    width: 8px;
+    background-color: #a5a5a5;
+    border: none;
+    margin-left: 7px;
+    border-radius: 50%;
+    padding: 1px 6px;
+}
+
+.tns-nav .tns-nav-active {
+    background-color: black;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(20, 20, 20);
+}
+
+.my-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tns1-item1 {
+padding-left: 20xpx;
+    height: auto;
+}
+
+
+/* .tns-item .tns-slide-active{
+
+    vertical-align: middle;
+
+} */
+
+/* @media screen and (max-width:750px) {
+    .tns-nav{
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .tns-nav button{
+        height: 13px;
+        width: 8px;
+        background-color: #a5a5a5;
+        border: none;
+        margin-left :-12px ;
+        border-radius: 50%;
+        padding: 1px 6px;
+    }
+    .tns-nav .tns-nav-active{
+        background-color: black;
+    }
+    
+} */
