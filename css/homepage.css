@@ -1829,7 +1829,9 @@ a {
     .overlay .email-menu a {
         font-size: 17px;
     }
-
+    .rolagemLogo700 {
+        filter: invert(1);
+    }
     .logo-casa img {
         width: 13vw;
         margin-top: -40%;
