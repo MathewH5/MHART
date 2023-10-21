@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.cdnfonts.com/css/neue-plak');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@300&family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+@font-face {
+    font-family: 'boldfont';
+    src: url('fontes/THEBOLDFONT 2022.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zanna';
+    src: url('fontes/Zanna-Personal Use.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+}
+
+/* Para navegadores Webkit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* .scroll-progress-bar {
+    background-color: #0074D9;
+    Cor de fundo da barra de rolagem de progresso
+    height: 4px;
+    Altura da barra de rolagem de progresso
+    width: 0;
+    A largura será definida dinamicamente com JavaScript
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    Para garantir que a barra de rolagem de progresso esteja na parte superior
+} */
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.right.fixed-width {
+    position: fixed;
+    right: 0;
+    padding-right: 20px;
+    max-width: 70%;
+}
+
+.fixed-width {
+    width: 16%;
+    
+}
+
+.fixed-width-image-gallery {
+    width: 78%;
+}
+
+/* Estilizando a barra de rolagem vertical */
+body::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Cor da alça da barra de rolagem */
+    border-radius: 5px;
+    /* Borda arredondada da alça */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #eee;
+    /* Cor do plano de fundo da barra de rolagem */
+}
+
+.scroll-progress-bar {
+    background-color: rgb(151, 28, 28);
+    /* Cor de fundo da barra de rolagem de progresso */
+    height: 4px;
+    /* Altura da barra de rolagem de progresso */
+    width: 0;
+    /* A largura será definida dinamicamente com JavaScript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /* Para garantir que a barra de rolagem de progresso esteja na parte superior */
+}
+
+/* Estilizando o elemento h4 que exibe a porcentagem */
+#scroll-progress-percentage {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(186, 10, 10);
+    /* Cor do texto */
+    font-size: 18px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Peso da fonte */
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 55px;
+    right: 35px;
+    font-size: 50px;
+}
+
+.overlay .closebtn.x {
+    color: #fff;
+}
+
+.overlay,
+.closebtn {
+    font-size: 40px;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.logo-menu {
+    filter: invert(1);
+}
+
+.logo-menu.LOGO {
+    filter: invert(0);
+}
+
+.logo-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    position: relative;
+    top: 8%;
+    width: 5vw;
+    right: 42%;
+}
+
+.logo-casa {
+    position: fixed;
+    z-index: 20;
+    /* align-items: flex-start; */
+    top: 8%;
+    left: 5%;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 6%;
+    width: 100%;
+    right: -16%;
+    /* text-align: center; */
+    margin-top: 30px;
+}
+
+.overlay-content .menu-item {
+    transition: color .45s var(--primary-ease);
+    position: relative;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+}
+
+.overlay-content .menu-item .palavraPrincipal {
+    display: block;
+    position: relative;
+    z-index: 3;
+    transition: all .75s var(--custom-ease-1);
+    clip-path: inset(0 0 0 0);
+}
+
+.overlay-content .menu-item.focused.focused-out .palavraPrincipal {
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(35px, 0, 0);
+}
+
+.overlay-content .menu-item.focused-out .palavraPrincipal {
+    clip-path: inset(0 100% 0 0);
+}
+
+.overlay-content .menu-item .numero {
+    color: #222;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+    transition: all .85s var(--custom-ease-1);
+}
+
+.overlay-content .menu-item .numero.numRolagem {
+    color: #fff;
+}
+
+.overlay-content .menu-item.focused .numero {
+    transform: translateZ(0);
+    opacity: 1;
+}
+
+.overlay-content .palavraEmBaixo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    color: #988f8f59;
+    z-index: 1;
+    transition: transform .75s;
+}
+
+.overlay-content .palavraEmBaixo.sombraMenuRolagem {
+    color: #2b2a2c;
+}
+
+.overlay-content .menu-item.focused .palavraEmBaixo {
+    transform: translate3d(35px, 0, 0);
+}
+
+.overlay-content {
+    padding: 8px;
+    font-size: 60px;
+}
+
+.overlay {
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1001;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 6%;
+    width: 100%;
+    right: -16%;
+    /* text-align: center; */
+    margin-top: 30px;
+}
+
+.overlay .email-menu a {
+    color: rgb(78 143 10);
+
+}
+
+.overlay .email-menu a.verdeMenu {
+    color: rgb(138, 226, 46);
+}
+
+.overlay a {
+
+    text-decoration: none;
+    color: #222;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a.textMenuRolagem {
+    color: rgb(241, 238, 233);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 55px;
+    right: 35px;
+    font-size: 50px;
+}
+
+.overlay .closebtn.x {
+    color: #fff;
+}
+
+.nav-button {
+
+    position: fixed;
+    top: 8%;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 0;
+    border-radius: 34px;
+    padding: 8px;
+    background-color: rgb(31, 31, 31);
+    margin: 8px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav-button i {
+    color: #fff;
+}
+
+.mobile-menu div {
+    width: 19px;
+    height: 2px;
+    background: #fff;
+    margin: 6px;
+    transition: 0.3s;
+}
+
+.type-h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 95px;
+    letter-spacing: -.04em;
+}
+
+.overlay-content .menu-item .palavraPrincipal {
+    display: block;
+    position: relative;
+    z-index: 3;
+    transition: all .75s var(--custom-ease-1);
+    clip-path: inset(0 0 0 0);
+}
+
+.overlay-content .menu-item.focused.focused-out .palavraPrincipal {
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(35px, 0, 0);
+}
+
+.overlay-content .menu-item.focused-out .palavraPrincipal {
+    clip-path: inset(0 100% 0 0);
+}
+
+.overlay-content .palavraEmBaixo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    color: #988f8f59;
+    z-index: 1;
+    transition: transform .75s;
+}
+
+.overlay-content .palavraEmBaixo.sombraMenuRolagem {
+    color: #2b2a2c;
+}
+
+.overlay-content .menu-item.focused .palavraEmBaixo {
+    transform: translate3d(35px, 0, 0);
+}
+
+.overlay-content .menu-item .numero {
+    color: #222;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+    transition: all .85s var(--custom-ease-1);
+}
+
+.overlay-content .menu-item .numero.numRolagem {
+    color: #fff;
+}
+
+.overlay-content .menu-item.focused .numero {
+    transform: translateZ(0);
+    opacity: 1;
+}
+
+.overlay-content .menu-item .numero {
+    color: #222;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+    transition: all .85s var(--custom-ease-1);
+}
+
+.overlay .email-menu a {
+    color: rgb(78 143 10);
+
+}
+
+.overlay .email-menu a.verdeMenu {
+    color: rgb(138, 226, 46);
+}
+
+.icons {
+    position: absolute;
+    bottom: 95px;
+    left: 66%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #222;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.icons li a img {
+    transform: scale(1.15);
+    filter: invert(0.7);
+    max-width: 180px;
+}
+
+.logo-casa img {
+    width: 5vw;
+    margin-top: -17%;
+    margin-left: -25%;
+}
+
+.overlay-content {
+    padding: 8px;
+    font-size: 60px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; */
+    font-family: 'Mulish', sans-serif;
+    /* font-family: 'Playfair Display', serif; */
+    backdrop-filter: blur(4px);
+    font-size: 15px;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay-content .menu-item .numero {
+    color: #222;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+    transition: all .85s var(--custom-ease-1);
+}
+
+.type-num {
+    font-family: Neue Plak W01 Bold, sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: .25em;
+}
+
+:root {
+    --custom-ease-1: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.email-menu {
+position: absolute;
+font-family: 'Ubuntu', sans-serif;
+font-weight: 700;
+font-size: 75px;
+line-height: 35px;
+/* letter-spacing: 1em; */
+font-size: .5em;
+left: 69%;
+top: 66%;
+}
