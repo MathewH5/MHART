@@ -1,70 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/michel.css">
-    <link rel="shortcut icon" href="img/logo teste site.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://kit.fontawesome.com/ca14b9e588.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-
-
-    <title>MHA michel</title>
-</head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes, maximum-scale=3">
+<link rel="stylesheet" href="css/cssGeral.css">
+<link rel="shortcut icon" href="img/logo teste site.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<title>MHA CASA</title>
 
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <div class="logo-casa" id="logo-casa">
+        <img src="../img/logo-casa.png" alt="logo-casa">
+    </div>
+
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" id="x" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="logo-menu" id="logo-menu"><img src="../img/logo-casa.png" alt=""></div>
+        <!-- <div class="button-container">
+            <a href="mailto:seuemail@example.com" class="contact-button">Contact us</a>
+          </div> -->
+
+        <div class="overlay-content">
+            <nav>
+                <ul>
+                    <li class="type-h2 menu-item">
+                        <a class="palavraPrincipal" id="palavraPrincipal" href="../index.html">Home</a>
+                        <div class="palavraEmBaixo" id="palavraEmBaixo">Home</div>
+                        <div class="numero type-num" id="numero">01</div>
+                    </li>
+                    <li class="type-h2 menu-item">
+                        <a class="palavraPrincipal" id="palavraPrincipal" href="../work.html">Work</a>
+                        <div class="palavraEmBaixo" id="palavraEmBaixo">Work</div>
+                        <div class="numero type-num" id="numero">02</div>
+                    </li>
+                    <li class="type-h2 menu-item">
+                        <a class="palavraPrincipal" id="palavraPrincipal" href="../services.html">Services</a>
+                        <div class="palavraEmBaixo" id="palavraEmBaixo">Services</div>
+                        <div class="numero type-num" id="numero">03</div>
+                    </li>
+                    <li class="type-h2 menu-item">
+                        <a class="palavraPrincipal" id="palavraPrincipal" href="../contat.html">Contat</a>
+                        <div class="palavraEmBaixo" id="palavraEmBaixo">Contat</div>
+                        <div class="numero type-num" id="numero">04</div>
+                    </li>
+                    <li class="type-h2 menu-item">
+                        <a class="palavraPrincipal" id="palavraPrincipal" href="../about.html">About</a>
+                        <div class="palavraEmBaixo" id="palavraEmBaixo">About</div>
+                        <div class="numero type-num" id="numero">05</div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="email-menu">
+            <a id="email-menu" href="mailto:seuemail@example.com">MichelHannaArt@gmail.com</a>
+            <a id="email-menu" href="tel:+1234567890">+55 (31) 98902-4652</a>
+        </div>
+        <ul class="icons">
+            <li class="img1"><a id="email-menu" href="https://m.facebook.com/groups/744128359597732/"
+                    target="_blank"><img src="../img/icons8-facebook-24.png" alt="icons"></a>
+            </li>
+            <li class="img2"><a id="email-menu" href="https://instagram.com/smk.tech?igshid=MzRlODBiNWFlZA=="
+                    target="_blank"><img src="../img/icons8-instagram-24.png" alt="icons"></a></li>
+            <li class="img3"><a id="email-menu"
+                    href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCKCGljTCsChbTxSbqCVWBMJshlNvzTszmxpzpQrVJbTsnNbmtWsjKGlQKQTbrQSNqgxNtmL"
+                    target="_blank"><img src="../img/icons8-gmail-24.png" alt="icons"></a></li>
+            <li class="img4"><a id="email-menu"
+                    href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCKCGljTCsChbTxSbqCVWBMJshlNvzTszmxpzpQrVJbTsnNbmtWsjKGlQKQTbrQSNqgxNtmL"
+                    target="_blank"><img src="../img/icons8-linkedin-24.png" alt="icons"></a></li>
+
+        </ul>
+
+    </div>
+
+
+    <button class="nav-button" id="nav-button" onclick="openNav()">
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </button>
+
 
     <div class="container">
-        <ul class="control" id="custom-control">
-            <li id="voltar" class="btn">
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li id="next" class="btn">
-                <i class="fas fa-chevron-right"></i>
-            </li>
-        </ul>
+        <div class="image-gallery fixed-width-image-gallery">
+            <div> <img src="../img/interior/jhoni/1 (1).JPG" alt="" width="100%" height="auto" ></div>
+            <div> <img src="../img/interior/jhoni/1 (2).JPG" alt="" width="100%" height="auto" ></div>
+            <div> <img src="../img/interior/jhoni/1 (3).JPG" alt="" width="100%" height="auto" ></div>
+            <div> <img src="../img/interior/jhoni/1 (4).JPG" alt="" width="100%" height="auto" ></div>
+         
+        </div>
+        <div class="right fixed-width">
+            <h1>MICHEL HANNA</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic nihil fugit nobis ab, asperiores mollitia
+                nisi soluta, nostrum excepturi eligendi et suscipit labore expedita? Corporis deleniti consequatur quae.
+                Quia.
+                Corrupti ullam, totam, repudiandae voluptas ea neque, culpa nisi aliquam modi non architecto corporis
+                dolorum et labore beatae velit quae. Molestiae magnam ut inventore a assumenda necessitatibus, modi
+                maxime aspernatur.</p>
+            <!-- Insira as informações relacionadas às imagens aqui -->
+        </div>
+        <div class="imgUmParaCelular image-gallery fixed-width-image-gallery">
+            <div> <img src="../img/interior/jhoni/1 (2).JPG" alt="" width="100%" height="auto" ></div>
+            <div class="vinheta-overlay"></div>
+        </div>
     </div>
-
-    <div class="my-slider">
-
-        <div> <img src="../img/interior/jhoni/1 (1).JPG" alt="" width="100%" height="auto" ></div>
-        <div> <img src="../img/interior/jhoni/1 (2).JPG" alt="" width="100%" height="auto" ></div>
-        <div> <img src="../img/interior/jhoni/1 (3).JPG" alt="" width="100%" height="auto" ></div>
-        <div> <img src="../img/interior/jhoni/1 (4).JPG" alt="" width="100%" height="auto" ></div>
-
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
     </div>
+    <h4 id="scroll-progress-percentage">0%</h4>
 
-    <script type="module">
-        var slider = tns({
-            container: '.my-slider',
-            items: 3,
-            slideBy: 1,
-            autoplay: true,
-            mouseDrag: true,
-            gutter:20,
-            edgePadding:20,
-            controlsPosition : 'bottom',
-            navPosition: 'bottom',
-            autoplayButtonOutput: false,
-            controlsContainer: '#custom-control',
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                    // controls:false
-                },
-                768: {
-                    items: 2,
-                    nav: true
-                }
-            }
-        });
-    </script>
-    
+    <script src="javascript/javascriptTodos.js"></script>
 </body>
+
+</html>
