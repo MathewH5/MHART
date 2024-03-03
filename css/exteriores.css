@@ -730,7 +730,23 @@ ul {
         z-index: 1;
         height: 90%;
     }
+    .container .text {
 
+        position: relative;
+        max-width: 75%;
+        margin-right: 20px;
+        margin-left: 60px;
+    }
+    .container .text p {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.5em;
+        top: auto;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .rTotal{
+        min-height: 70vh;
+    }
     .imgPrincipal {
         object-fit: cover;
         position: relative;

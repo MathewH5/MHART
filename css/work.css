@@ -756,7 +756,12 @@ ul {
     .icons {
         left: 58%;
     }
-
+    .rTotal{
+        min-height: 80vh;
+    }
+    .selecionar {
+        height: 80vh;
+    }
     .conteiner .titulo h1 {
         color: #fff;
         font-size: 5em;
@@ -946,7 +951,7 @@ ul {
     }
 
     .r2 {
-        min-height: 280vh;
+        min-height: 20vh;
         padding: 20px;
     }
 
